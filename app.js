@@ -23,7 +23,7 @@ const getStats = async () => {
         const res = await axios.get(req);
         hapedata = res.data;
         client.user.setActivity(`
-        \r\n${hapedata.stats.floor_price} Ξ`,{type: 'WATCHING'},`sadasd`);
+        \r\n${hapedata.stats.floor_price} Ξ`,{type: 'PLAYING'},`sadasd`);
     } catch (err) {
         console.log(err);
     }
