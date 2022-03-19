@@ -49,13 +49,13 @@ const showData = () => {
     embed.addFields({ name: 'Floor Price', value: `${hapedata.stats.floor_price} Ξ` },
                     { name: 'Total Supply', value: `${hapedata.stats.total_supply}` },
                     { name: '# of Owners', value: `${hapedata.stats.num_owners}` },
-                    { name: '24 Hours Volume', value: `${hapedata.stats.one_day_volume}` },
+                    { name: '24 Hours Volume', value: `${hapedata.stats.one_day_volume} Ξ` },
                     { name: '24 Hours Sales', value: `${hapedata.stats.one_day_sales}` },
-                    { name: '7 Days Volume', value: `${hapedata.stats.seven_day_volume}` },
+                    { name: '7 Days Volume', value: `${hapedata.stats.seven_day_volume} Ξ` },
                     { name: '7 Days Sales', value: `${hapedata.stats.seven_day_sales}` },
-                    { name: '30 Days Volume', value: `${hapedata.stats.thirty_day_volume}` },
+                    { name: '30 Days Volume', value: `${hapedata.stats.thirty_day_volume} Ξ` },
                     { name: '30 Days Sales', value: `${hapedata.stats.thirty_day_sales}` },
-                    { name: 'Total Volume', value: `${hapedata.stats.total_volume}` },
+                    { name: 'Total Volume', value: `${hapedata.stats.total_volume} Ξ` },
                     { name: 'Total Sales', value: `${hapedata.stats.total_sales}` },
                     { name: 'Market Cap', value: `${hapedata.stats.market_cap}` }
 );
