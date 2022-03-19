@@ -39,7 +39,7 @@ const getData = async () => {
     }
 }
 const showData = () => {
-    const embed = new discord.MessageEmbed().setTitle('Hape Prime Data 📊');
+    const embed = new discord.MessageEmbed().setTitle(' Hape Prime Data 📊');
    // const embed = new MessageEmbed()
     
     
