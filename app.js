@@ -28,16 +28,7 @@ const getStats = async () => {
         console.log(err);
     }
 }
-const getData = async () => {
-    try {
-        let req = `https://api.opensea.io/api/v1/collection/hapeprime/stats?format=json`;
-        const res = await axios.get(req);
-        hapestats = res.data;
-        return hapestats;
-    } catch (err) {
-        console.log(err);
-    }
-}
+
 const showData = () => {
     const embed = new discord.MessageEmbed().setTitle(' Hape Prime Data 📊');
    // const embed = new MessageEmbed()
