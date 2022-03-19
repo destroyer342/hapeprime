@@ -22,7 +22,7 @@ const getStats = async () => {
         let req = `https://api.opensea.io/api/v1/collection/hapeprime/stats?format=json`;
         const res = await axios.get(req);
         hapedata = res.data;
-        client.user.setActivity(`${hapedata.stats.floor_price} Ξ`);
+        client.user.setActivity(`${hapedata.stats.floor_price} Ξ Holder: ${hapedata.stats.num_owners}`);
     } catch (err) {
         console.log(err);
     }
