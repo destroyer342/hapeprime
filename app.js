@@ -22,7 +22,7 @@ const getStats = async () => {
         let req = `https://api.opensea.io/api/v1/collection/hapeprime/stats?format=json`;
         const res = await axios.get(req);
         hapedata = res.data;
-        client.user.setActivity(`${hapedata.stats.floor_price} Ξ `);
+        client.user.setActivity(`${hapedata.stats.floor_price}  `);
     } catch (err) {
         console.log(err);
     }
@@ -54,6 +54,7 @@ const showData = () => {
 }
 client.on("messageCreate", (message) => {
 if (message.author.bot == false){
+    getStats();
     const message2 = message.content
     const lowerMessage = message2.toLowerCase()
         if(lowerMessage==='!showdata'){
