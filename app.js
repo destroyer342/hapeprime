@@ -1,20 +1,16 @@
 // ID : 954134777060016178
 // Invite_link: https://discord.com/oauth2/authorize?client_id=954134777060016178&scope=bot&permissions=1
-const {Constants, Client, Intents, MessageEmbed} = require('discord.js');
+require("dotenv").config();
 const axios = require('axios');
-require('dotenv').config();
-
-let gasPrices = [];
-let alerts = new Map();
-
-const client = new Client({
-    intents : [Intents.FLAGS.GUILDS, Intents.FLAGS.DIRECT_MESSAGES]
+const discord = require('discord.js')
+let hapedata = [];
+const client = new discord.Client({
+    intents:["GUILDS","GUILD_MESSAGES", "DIRECT_MESSAGES"], partials:["CHANNEL", "GUILD_MEMBER", "MESSAGE", "REACTION", "USER"]
 });
 
 
 
-
-client.on("ready", () => {
+client.on("ready", (clientparams) => {
     console.log("this bot is now online " +client.user.tag)
     //client.user.setPresence({status: "dnd", activities: [{type: 'WATCHING', name: `⛽:  gweei`}] });
     //client.user.setActivity(`dwjkahdjhwajkdwajdaw`)
@@ -33,7 +29,7 @@ const getStats = async () => {
 }
 
 const showData = () => {
-    const embed = new MessageEmbed().setTitle(' Hape Prime Data 📊');
+    const embed = new discord.MessageEmbed().setTitle(' Hape Prime Data 📊');
    // const embed = new MessageEmbed()
     
     
@@ -59,7 +55,6 @@ const showData = () => {
 setInterval(getStats, 10 * 2000);
 client.on("messageCreate", (message) => {
 if (message.author.bot == false){
-    getStats();
     const message2 = message.content
     const lowerMessage = message2.toLowerCase()
         if(lowerMessage==='!showdata'){
