@@ -10,7 +10,7 @@ const client = new discord.Client({
 
 
 
-client.on("ready", (clientparams) => {
+client.on("ready", () => {
     console.log("this bot is now online " +client.user.tag)
     //client.user.setPresence({status: "dnd", activities: [{type: 'WATCHING', name: `⛽:  gweei`}] });
     //client.user.setActivity(`dwjkahdjhwajkdwajdaw`)
@@ -29,7 +29,7 @@ const getStats = async () => {
 }
 
 const showData = () => {
-    const embed = new discord.MessageEmbed().setTitle(' Hape Prime Data 📊');
+    const embed = new MessageEmbed().setTitle(' Hape Prime Data 📊');
    // const embed = new MessageEmbed()
     
     
