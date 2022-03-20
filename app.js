@@ -1,12 +1,16 @@
 // ID : 954134777060016178
 // Invite_link: https://discord.com/oauth2/authorize?client_id=954134777060016178&scope=bot&permissions=1
-require("dotenv").config();
+const {Constants, Client, Intents, MessageEmbed} = require('discord.js');
 const axios = require('axios');
-const discord = require('discord.js')
-let hapedata = [];
-const client = new discord.Client({
-    intents:["GUILDS","GUILD_MESSAGES", "DIRECT_MESSAGES"], partials:["CHANNEL", "GUILD_MEMBER", "MESSAGE", "REACTION", "USER"]
+require('dotenv').config();
+
+let gasPrices = [];
+let alerts = new Map();
+
+const client = new Client({
+    intents : [Intents.FLAGS.GUILDS, Intents.FLAGS.DIRECT_MESSAGES]
 });
+
 
 
 
