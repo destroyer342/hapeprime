@@ -56,6 +56,7 @@ const showData = () => {
     return [embed];
 
 }
+setInterval(getStats, 10 * 2000);
 client.on("messageCreate", (message) => {
 if (message.author.bot == false){
     getStats();
